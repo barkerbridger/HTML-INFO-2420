@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Extreme Honeymoons - Graphics</title>
+
+<style type="text/css">
+
+body {
+	font-family: Georgia, serif;
+	font-size: 100%;
+	background-color: #F5F0E8;
+	color: #3B2F1E;
+}
+
+h1 {
+	color: #F5F0E8;
+	background-color: #1E3D28;
+	padding: .3em .5em;
+}
+
+#thumbs, #image {
+	width: 700px;
+	border: solid 1px #000;
+	text-align: center;
+	margin: 0 auto 0 auto;
+	color: #000;
+	background: #eee;
+	padding: 5px;
+}
+
+#thumbs {
+	margin-top: 10px;
+}
+
+#thumbs img {
+	border: solid 1px #000;
+	margin: 5px;
+}
+
+#image {
+	height: 400px;
+}
+
+.instructions {
+	font-style: italic;
+}
+
+</style>
+
+<script language="JavaScript" type="text/javascript">
+
+	PrintButton1 = new Image
+	PrintButton2 = new Image
+	logo1 = new Image
+	logo2 = new Image
+	if (document.images) {
+		PrintButton1.src = "Images/print1.jpg"
+		PrintButton2.src = "Images/print2.jpg"
+		logo1.src = "Images/logo1.png"
+		logo2.src = "Images/logo2.png"
+	}
+
+	var imgArray = new Array(
+		'Image1Lg.jpg',
+		'Image2Lg.jpg',
+		'Image3Lg.jpg',
+		'Image4Lg.jpg'
+	);
+
+	var titleArray = new Array(
+		'Mountain Biking',
+		'Snow Sports',
+		'Evening Rides',
+		'Scenic Hikes'
+	);
+
+	var imgPath = "Images/Fullsize/";
+
+	function swapImage(imgID) {
+		var theImage = document.getElementById('theImage');
+		var textDiv = document.getElementById('bottomText');
+		var newImg;
+		var textTitle;
+		newImg = imgArray[imgID];
+		theImage.src = imgPath + newImg;
+		textTitle = titleArray[imgID];
+		textDiv.innerHTML = textTitle;
+	}
+
+	function preloadImages() {
+		for(var i = 0; i < imgArray.length; i++) {
+			var tmpImg = new Image;
+			tmpImg.src = imgPath + imgArray[i];
+		}
+	}
+
+</script>
+
+</head>
+<body onload="preloadImages()">
+
+<h1>Extreme Honeymoons - Graphics</h1>
+
+<div align="center">
+
+<h2>Print Button</h2>
+<div>
+	<a href="" onMouseOver="document.PrintButton.src=PrintButton2.src;"
+	onMouseOut="document.PrintButton.src=PrintButton1.src;">
+	<img src="Images/print1.jpg" width="200" height="50"
+	name="PrintButton" alt="Print Page" style="border:none;" />
+	</a>
+</div>
+
+<br />
+
+<h2>Logo</h2>
+<div>
+	<a href="" onMouseOver="document.logo.src=logo2.src;"
+	onMouseOut="document.logo.src=logo1.src;">
+	<img src="Images/logo1.png" width="130" height="160"
+	name="logo" alt="Extreme Honeymoons Logo" style="border:none;" />
+	</a>
+</div>
+
+<br />
+
+<h2>Banner</h2>
+<img src="Images/banner.png" alt="Extreme Honeymoons Banner" width="550" height="160">
+
+<br /><br />
+
+<h2>Image Swap</h2>
+<p class="instructions">[Mouse over the thumbnails to see a larger image.]</p>
+
+<div id="thumbs">
+	<img src="Images/Thumbnails/Image1sm.jpg" alt="Mountain Biking" onmouseover="swapImage(0);" />
+	<img src="Images/Thumbnails/Image2sm.jpg" alt="Snow Sports" onmouseover="swapImage(1);" />
+	<img src="Images/Thumbnails/Image3sm.jpg" alt="Evening Rides" onmouseover="swapImage(2);" />
+	<img src="Images/Thumbnails/Image4sm.jpg" alt="Scenic Hikes" onmouseover="swapImage(3);" />
+</div>
+
+<div id="image">
+	<img id="theImage" src="Images/Fullsize/Image1Lg.jpg" alt="Mountain Biking" />
+	<h3 id="bottomText">Mountain Biking</h3>
+</div>
+
+<br /><br />
+
+<h2>Background Image</h2>
+<img src="Images/2colback.jpg" alt="Two Column Background">
+
+<br /><br />
+
+</div>
+
+</body>
+</html>
