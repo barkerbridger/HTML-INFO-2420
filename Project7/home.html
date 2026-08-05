@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Extreme Honeymoons - Home</title>
+<link rel="stylesheet" type="text/css" href="mystyles.css">
+<script type="text/javascript" src="myscripts.js"></script>
+</head>
+<body onload="preloadImages()">
+ 
+<div id="container">
+ 
+    <header id="header">
+        <img src="Images/logo1.png" id="logoImg" alt="Extreme Honeymoons Logo" onmouseover="this.src='Images/logo2.png'" onmouseout="this.src='Images/logo1.png'">
+		<img src="Images/banner.png" id="bannerImg" alt="Extreme Honeymoons Banner">
+ 
+        <nav id="nav">
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="AboutUs.html">About Us</a></li>
+                <li><a href="Tributes.html">Tributes</a></li>
+                <li><a href="Survey.html">Survey</a></li>
+                <li><a href="Favorites.html">Favorites</a></li>
+            </ul>
+        </nav>
+    </header>
+ 
+    <section id="section">
+        <article id="article">
+ 
+            <h1>Welcome to Extreme Honeymoons</h1>
+<p>
+    Welcome to Extreme Honeymoons! If you are just getting hitched, we can
+    help make your honeymoon outrageous. Take a look at our Excursions and
+    take the opportunity to complete our survey.
+</p>
+ 
+            <h2>Adventure Gallery</h2>
+            <!-- TODO: Paste your Thumbnail/Fullsize image swap HTML from Project 6 here -->
+          <div id="thumbnails">
+			<a href="#" onmouseover="document.getElementById('fullsizeImg').src='Images/Fullsize/Image1Lg.jpg'">
+			<img src="Images/Thumbnails/Image1sm.jpg" alt="Adventure photo 1">
+			</a>
+			<a href="#" onmouseover="document.getElementById('fullsizeImg').src='Images/Fullsize/Image2Lg.jpg'">
+			<img src="Images/Thumbnails/Image2sm.jpg" alt="Adventure photo 2">
+			</a>
+			<a href="#" onmouseover="document.getElementById('fullsizeImg').src='Images/Fullsize/Image3Lg.jpg'">
+			<img src="Images/Thumbnails/Image3sm.jpg" alt="Adventure photo 3">
+			</a>
+			<a href="#" onmouseover="document.getElementById('fullsizeImg').src='Images/Fullsize/Image4Lg.jpg'">
+			<img src="Images/Thumbnails/Image4sm.jpg" alt="Adventure photo 4">
+			</a>
+
+			<img id="fullsizeImg" src="Images/Fullsize/Image1Lg.jpg" alt="Full size adventure photo">
+		</div>
+ 
+            <h2>A Story Worth Sharing</h2>
+<p>
+    <img src="Images/BikeCouple1Sm.jpg" alt="Peter and Polly mountain biking in Moab" id="tributeImg">
+    Who would have thought you could spend your honeymoon having the adventure
+    of your life. We were provided with a map and GPS receiver and set off
+    through the red rock of Moab. Every time we look at our photos from that
+    weekend, we remember the wonderful time we had.
+    <a href="Tributes.html">more &gt;&gt;</a>
+</p>
+ 
+        </article>
+    </section>
+ 
+    <footer id="footer">
+    <p>Webmaster: <a href="mailto:10775480@my.uvu.edu">10775480@my.uvu.edu</a></p>
+    <p>This web site has been created solely for educational purposes.</p>
+</footer>
+ 
+</div>
+ 
+</body>
+</html>
